@@ -1,0 +1,49 @@
+[
+		{
+			"question" : "How far is the trappist-one system from us?",
+			"answer" : [
+				{ "id": 0, "text": "39 light years"},
+				{ "id": 1, "text": "66  light yrs"},
+				{ "id": 2, "text": "55 light years"},
+				{ "id": 3, "text": "49 light years"}
+			],
+			"correct": 0
+		},
+
+		{
+	"question" : "How Many planets have been discovered on the trappist-one planetary system?",
+	"answer" : [
+		{ "id": 0, "text": "At least 7"},
+		{ "id": 1, "text": "12"},
+		{ "id": 2, "text": "9"},
+		{ "id": 3, "text": "1"}
+	],
+	"correct": 0
+},
+{
+	"question" : "How many of the trappist-one planets are believed to be in the Goldilocks zone i.e Its distance from the star means it is neither too hot, nor too cold to support liquid water?",
+	"answer" : [
+		{ "id": 0, "text": "80"},
+		{ "id": 1, "text": "All of them"},
+		{ "id": 2, "text": "At least 3"},
+		{ "id": 3, "text": "12"}
+	],
+	"correct": 2
+},
+
+{
+	"question" : "What type of star is the trappist-one system revolving around?",
+	"answer" : [
+		{ "id": 0, "text": "A neuron star"},
+		{ "id": 1, "text": "A red dwarf"},
+		{ "id": 2, "text": "A black dwarf"},
+		{ "id": 3, "text": "A white dwarf"}
+	],
+	"correct": 1
+}
+
+
+
+
+
+]

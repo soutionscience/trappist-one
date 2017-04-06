@@ -1,0 +1,55 @@
+<section class="topGraphics">
+<div class="container">
+
+
+		<div class="circle">{{questionLength}}</div>
+		<div class="line-vertical"></div>
+		<div class="line-horizontal"></div>
+
+		<div class="intro {{(activeQuestion > -1 ) ? 'inactive' : 'active'}}">
+			<h1>Trappist-1 <br>Solar System</h1>
+			<div class="line-horizontal"></div>
+			<p>Test your knowledge of the trapist-1 solar system</p>
+			<div class="btn" ng-click="activeQuestion = 0">Begin</div>
+			
+		</div> <!-- end of intro -->
+
+		<div class="quiz">
+		     <div class="question {{(myquestions.questionState === 'answered')? 'answered' : 'unanswered' }}
+		     {{( $index === activeQuestion) ? 'active' : 'inactive'}}" 
+		     ng-repeat="myquestions in myQuestions">
+		     <!-- <h1>Question 1:</h1> -->
+				<p class="qestion"> {{myquestions.question}}</p>
+				<div class="line-horizontal"></div>
+				<div class="line-vertical"></div>
+				<div class="choices">
+					<div class="answer" 
+					  ng-class= "{selected:isSelected($parent.$index, $index), correct:isCorrect($parent.$index, $index) }"
+					  ng-repeat="Answer in myQuestions[$index].answer" 
+					  ng-click="selected($parent.$index ,$index)"
+					>{{Answer.text}}</div>
+					
+				</div> <!-- end of choices -->
+				<div class="feedback">
+						<div class="line-horizontal"></div>
+						<p ng-show ="myquestions.correctness === 'correct'">Correct</p>
+					    <p class="wrong" ng-show="myquestions.correctness === 'incorrect'"> Oops that answer is not correct</p>
+					    <div class="btn" ng-click="nextQuestion()">Continue</div>
+					
+				</div> <!-- end of feedback -->
+			</div> <!-- end of question -->
+			
+        </div> <!-- end of quiz -->
+        <div class="results {{(totalQuestions === activeQuestion) ? 'active': 'inactive'}}">
+         <p>Your score is {{percentage}}%</p>
+         <p>You got {{score}} of {{totalQuestions}} questions correct!!</p>
+         <p>Share your results </p>
+		         <div class="share" ng-bind-html="createShareLink(percentage)">
+					  	
+		  		</div>
+        	
+        </div>
+ </div>
+
+	
+</section>
